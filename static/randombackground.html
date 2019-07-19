@@ -1,0 +1,46 @@
+<!--This page is for the randomized colors for the application. The javacript that is seen
+below controls the timer for the page. The time is currently set to 20 seconds as seen
+in the div. -->
+
+<div id="counter">20</div>
+<script>
+    setInterval(function() {
+        var div = document.querySelector("#counter");
+        var count = div.textContent * 1 - 1;
+        div.textContent = count;
+        if (count <= 0) {
+            window.location.replace('transition.html');
+        }
+    }, 1000);
+</script>
+
+
+<!-- The script below is the function that allows for the listed colors to be selected at random
+to change the background color every 1000 milliseconds -->
+<script type="text/javascript">
+
+function setbackground()
+{
+window.setTimeout( "setbackground()", 1500); //milliseconds delay
+
+var index = Math.round(Math.random() * 5);
+
+var ColorValue = "999999"; // default color - white (index = 0)
+
+if(index == 1)
+ColorValue = "0000FF"; //blue
+if(index == 2)
+ColorValue = "FF0000"; //red
+if(index == 3)
+ColorValue = "FFFF00"; //yellow
+if(index == 4)
+ColorValue = "00FF00"; //light green
+if(index == 5)
+ ColorValue = "999999"; //grey
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+
+}
+</script>
+
+<body onload="setbackground();">

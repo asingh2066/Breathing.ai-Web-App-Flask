@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type= "text/css" href="static/css/samplePre.css" />
+
+  </head>
+  <body>
+      <div class="transparent-box">
+
+
+          <div class="container">
+            <div>
+            Which Color Did You Find Most Calming? <br>
+            Rate Each Color From One - Five!
+
+            </div><br>
+          <div class="column">
+            <p>Red: <span id="demo" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange" class="slider">
+
+            <p>Green: <span id="demo2" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange2" class="slider">
+
+            <p>Blue: <span id="demo3" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange3" class="slider">
+
+            <p>Gray: <span id="demo4" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange4" class="slider">
+
+            <p>Yellow: <span id="demo5" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange5" class="slider">
+          </div>
+
+          <div class="column">
+            <p>Comic Sans: <span id="demo6" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange6" class="slider">
+
+            <p>Ariel: <span id="demo7" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange7" class="slider">
+
+            <p>Times New Roman: <span id="demo8" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange8" class="slider">
+
+            <p>Impact: <span id="demo9" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange9" class="slider">
+
+            <p>Century: <span id="demo10" class= "value"></span></p>
+            <input type="range" min="1" max="5" value="1" id="myRange10" class="slider">
+          </div>
+            <link rel="stylesheet" type="text/css" href="sample.css">
+
+
+          </div>
+          <br><br>
+
+        <center>  <form action="sample.html">
+              <input class="myButton" type="submit" value="Next Page" onclick= "Passvalue();"/>
+          </form> </center>
+
+
+
+      </div>
+
+
+  </body>
+
+  <script>
+
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+
+      slider.oninput = function value1() {
+        output.innerHTML = this.value;
+        }
+
+      var slider2 = document.getElementById("myRange2");
+      var output2 = document.getElementById("demo2");
+      output2.innerHTML = slider2.value;
+
+      slider2.oninput = function value2(){
+        output2.innerHTML = slider2.value;
+       }
+
+
+      var slider3 = document.getElementById("myRange3");
+      var output3 = document.getElementById("demo3");
+      output3.innerHTML = slider3.value;
+
+      slider3.oninput = function value3() {
+        output3.innerHTML = this.value;
+        }
+
+        var slider4 = document.getElementById("myRange4");
+      var output4 = document.getElementById("demo4");
+      output4.innerHTML = slider4.value;
+
+      slider4.oninput = function value4() {
+        output4.innerHTML = this.value;
+        }
+
+
+      var slider5 = document.getElementById("myRange5");
+      var output5 = document.getElementById("demo5");
+      output5.innerHTML = slider5.value;
+
+      slider5.oninput = function value5() {
+        output5.innerHTML = this.value;
+        }
+
+
+        var slider6 = document.getElementById("myRange6");
+        var output6 = document.getElementById("demo6");
+        output6.innerHTML = slider6.value;
+
+        slider6.oninput = function value6() {
+          output6.innerHTML = slider6.value;
+          }
+
+        var slider7 = document.getElementById("myRange7");
+        var output7 = document.getElementById("demo7");
+        output7.innerHTML = slider7.value;
+
+        slider7.oninput = function value7(){
+          output7.innerHTML = slider7.value;
+         }
+
+
+        var slider8 = document.getElementById("myRange8");
+        var output8 = document.getElementById("demo8");
+        output8.innerHTML = slider8.value;
+
+        slider8.oninput = function value8() {
+          output8.innerHTML = slider8.value;
+          }
+
+        var slider9 = document.getElementById("myRange9");
+        var output9 = document.getElementById("demo9");
+        output9.innerHTML = slider9.value;
+
+        slider9.oninput = function value9() {
+          output9.innerHTML = slider9.value;
+          }
+
+
+        var slider10 = document.getElementById("myRange10");
+        var output10 = document.getElementById("demo10");
+        output10.innerHTML = slider10.value;
+
+        slider10.oninput = function value10() {
+          output10.innerHTML = slider10.value;
+          }
+
+
+
+
+        function Passvalue(){
+        localStorage.setItem("value1", slider.value);
+        localStorage.setItem("value2", slider2.value);
+        localStorage.setItem("value3", slider3.value);
+        localStorage.setItem("value4", slider4.value);
+        localStorage.setItem("value5", slider5.value);
+        localStorage.setItem("value6", slider6.value);
+        localStorage.setItem("value7", slider7.value);
+        localStorage.setItem("value8", slider8.value);
+        localStorage.setItem("value9", slider9.value);
+        localStorage.setItem("value10", slider10.value);
+        return false;
+      }
+
+  </script>
+
+</html>

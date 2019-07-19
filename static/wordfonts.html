@@ -1,0 +1,45 @@
+<!-- The javascript function is randomly selecting a font every 700 milliseconds. -->
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="static/css/fonts.css" />
+
+<div class="random">
+  <p class="random__item">I AM</p>
+</div>
+
+<!-- redirects page to another page after certain amount of time -->
+<div id="counter">25</div>
+   <script>
+       setInterval(function() {
+           var div = document.querySelector("#counter");
+           var count = div.textContent * 1 - 1;
+           div.textContent = count;
+           if (count <= 0) {
+               window.location.replace('samplePre.html');
+           }
+       }, 1000);
+   </script>
+
+<!-- The actual function allowing for the fonts to be randomly selected -->
+<script>
+function randomFont(){
+  var item = document.querySelectorAll('.random__item'),
+      range = 8, i = 0, rnd;
+
+    for(var j = 0; j < item.length; j++){
+      rnd =  getRandomInt(1, range);
+      item[j].classList.toggle("font__"+ rnd);
+    }
+}
+
+setInterval(function(){
+  randomFont();
+}, 700);
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+</script>
+
+</html>
