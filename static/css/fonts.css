@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+}
+
+%_opensans__base{
+  font-family: opensans;
+}
+%_sans__base{
+  font-family: sans;
+}
+%_impact__base{
+  font-family: Impact, opensans;
+}
+%_comic__base{
+  font-family: "Comic Sans MS", cursive;
+}
+%_mono__base{
+  font-family: monospace;
+}
+%_arial__base{
+  font-family:"Arial", Gadget, sans-serif;
+}
+
+.random{
+  width: 900px;
+  height: auto;
+  padding: 40px;
+  margin: 0 auto;
+  font-size: 100px;
+  text-align: center;
+}
+  &__item{
+    width: 25%;
+    float: left;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .font__1{
+    @extend %_opensans__base;
+    font-weight: normal;
+  }
+  .font__2{
+    @extend %_opensans__base;
+    font-weight: bolder;
+  }
+  .font__3{
+    @extend %_impact__base;
+  }
+  .font__4{
+    @extend %_comic__base;
+  }
+  .font__5{
+    @extend %_mono__base;
+  }
+  .font__6{
+    @extend %_mono__base;
+    font-weight: bolder;
+  }
+  .font__7{
+    @extend %_arial__base;
+    font-weight: 200;
+  }
+  .font__8{
+    @extend %_arial__base;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.console{
+  float:left;
+  width: calc(100%/8);
+  text-align: center;
+  padding: 5px;
+}

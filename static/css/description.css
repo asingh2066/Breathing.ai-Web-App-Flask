@@ -1,0 +1,137 @@
+body {
+  background-image: url(../images/skies_breathing.ai.jpg);
+  height: 755px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  position: absolute;
+  height: 400px;
+  width: 1100px;
+  top: 100px;
+  left: calc(35% - 325px);
+  display: flex;
+}
+
+.card {
+  display: flex;
+  height: 450px;
+  width: 400px;
+  opacity: .95;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 1rem 0 11px #999;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: 20px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: grey;
+  font-weight: 300;
+  font-size: 24px;
+  position: absolute;
+  left: 40%;
+  top: -160px;
+}
+.text{
+  color: grey;
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-right: 50px;
+  position: absolute;
+  left: 20px;
+  top: 268px;
+}
+
+.circle {
+  position: absolute;
+  top: -70px;
+  left: calc(40% - 60px);
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+
+c{
+  position:absolute;
+  left:50%;
+  bottom:10%;
+  transform: translate(-50%,-50%);
+  width:150px;
+  height:60px;
+  text-align: center;
+  line-height: 60px;
+  color:#fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(90deg,#f441a5,#ffeb3b,#03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  z-index: 1;
+}
+c:hover
+{
+  animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+  0%
+  {
+    background-position: 0%;
+  }
+  100%
+  {
+    background-position: 400%;
+  }
+
+}
+c:before
+{
+  content: '';
+  position: absolute;
+  top:-5px;
+  left:-5px;
+  right:-5px;
+  bottom:-5px;
+  z-index: -1;
+  background: linear-gradient(90deg,#f441a5,#ffeb3b,#03a9f4); /*#03a9f4 -- took out this color after 90deg*/
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
+c:hover:before
+{
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}

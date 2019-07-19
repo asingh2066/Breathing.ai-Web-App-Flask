@@ -1,0 +1,72 @@
+body{
+  background-color:#989898;
+}
+h3{
+  color:white;
+  font-family: Inconsolata, monospace;
+  text-align: center;
+  margin-top:-20px;
+  letter-spacing:2px;
+
+}
+.container{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.svg{
+transform:translate(39%,30%);
+}
+
+.top{
+  transform-origin: 10% 15%;
+   animation: scale2 3s ease infinite;
+}
+.bottom{
+   animation: scale2 3s ease infinite;
+  transform-origin: 10% 35%;
+}
+@keyframes scale2 {
+  70%{ transform:scale(1.2)
+  }
+}
+svg{
+  transform-origin: 10% 19%;
+  animation: rotate 3s linear infinite;
+  overflow: visible;
+  width: 400px;
+}
+@keyframes rotate {
+  to{transform:rotate(360deg);}
+}
+ .first-left{
+  animation: scale 3s ease infinite;
+ transform-origin: 5% 25%;
+}
+@keyframes scale {
+  33%{ transform:scale(1.3)
+  }
+}
+.center{
+  animation: scale1 3s ease infinite;
+ transform-origin: 10% 25%;
+}
+@keyframes scale1 {
+   33%{ transform:scale(1)
+  }
+  63%{ transform:scale(1.4)
+  }
+}
+.first-right{
+  animation: scale 4s ease infinite;
+ transform-origin: 10% 25%;
+}
+@keyframes scale3 {
+   33%{ transform:scale(1)
+  }
+  63%{ transform:scale(1)
+  }
+    65%{ transform:scale(1.6)
+  }
+}
